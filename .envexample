@@ -1,0 +1,52 @@
+# ============================================
+# HIRE-SENSE AI – ENVIRONMENT CONFIGURATION
+# ============================================
+
+# ----- Paths (adjust to your local setup) -----
+BASE_PATH=C:\path\to\your\project
+SKILLS_FILE=${BASE_PATH}\Open Positions Skill Set Details.xlsx
+RESUMES_FOLDER=${BASE_PATH}\Resumes
+SHORTLISTED_FILE=${BASE_PATH}\Shortlisted.xlsx
+NON_SHORTLISTED_FILE=${BASE_PATH}\Non_Shortlisted.xlsx
+CALLS_OUTPUT_FILE=${BASE_PATH}\Shortlisted_called.xlsx
+
+# ----- Twilio Credentials -----
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_PHONE_NUMBER=+1xxxxxxxxxx
+FLOW_SID=your_twilio_studio_flow_sid
+
+# ----- ngrok -----
+NGROK_AUTH_TOKEN=your_ngrok_auth_token
+NGROK_PORT=5000
+
+# ----- Email (Gmail App Password) -----
+SENDER_EMAIL=your_email@gmail.com
+SENDER_PASSWORD=your_16_char_app_password
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+
+# ----- Scoring & Filtering -----
+SKILL_WEIGHT=0.7
+EXPERIENCE_WEIGHT=0.3
+SEMANTIC_THRESHOLD=0.3
+EXACT_MATCH_SCORE=0.95
+SHORTLIST_THRESHOLD=0.6
+
+# ----- Call settings -----
+CALL_DELAY=5
+MAX_RANK_TO_CALL=10
+MAX_WAIT_TIME=120
+RESPONSE_CHECK_INTERVAL=10
+
+# ----- Email settings -----
+EMAIL_DELAY=2
+FILTER_BY_RANK=True
+MAX_RANK=10
+
+# ----- Risk Filter Settings -----
+RISK_FILTERED_FILE=${BASE_PATH}\Shortlisted_clean.xlsx
+RISKY_FILE=${BASE_PATH}\Risky_Candidates.xlsx
+MAX_JOBS_IN_LAST_YEARS=2
+MAX_JOB_HOP_COUNT=3
+MAX_GAP_MONTHS=24
